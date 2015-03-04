@@ -1,0 +1,15 @@
+{
+  "name": "Snow Day Calculator",
+  "version": "0.0.0",
+  "authors": [
+    "b3zman41 <terencebezman@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

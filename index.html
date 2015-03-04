@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Snow Day Calculator</title>
+  <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
+  <link rel="stylesheet" href="styles/main.css">
+
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-aria/angular-aria.js"></script>
+  <script src="/bower_components/angular-animate/angular-animate.js"></script>
+  <script src="/bower_components/angular-material/angular-material.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+<body ng-controller="MainController" style="background-image: url('images/notebook.png')">
+
+<md-toolbar>
+  <h2 class="md-toolbar tools">Snow Day Calculator</h2>
+</md-toolbar>
+
+<div layout="row" layout-align="space-around">
+  <md-content id="userInput">
+    <md-autocomplete
+      md-selected-item="selectedLocation"
+      md-selected-item-change="selectedItemChange()"
+      placeholder="City, Zip"
+      md-search-text="locationSearchText"
+      md-delay="50"
+      md-search-text-change="locationSearchChange()"
+      md-items="location in locations | LocationsFilter">
+
+      <span>{{location.description}}</span>
+
+    </md-autocomplete>
+
+    <md-input-container>
+      <label>How many snow days have you had this year?</label>
+      <input ng-model="snowDaysThisYear" type="number">
+    </md-input-container>
+
+    <md-select class="userThinksHasOffSelect" ng-model="userThinksHasOff" placeholder="Do you think you will have off?">
+      <md-option ng-value=""></md-option>
+      <md-option ng-value="true">Yes</md-option>
+      <md-option ng-value="false">No</md-option>
+    </md-select>
+
+    <div id="calculateButton" layout="row" layout-align="center center">
+      <md-button ng-click="updateWeather()" class="md-primary md-raised">Calculate</md-button>
+    </div>
+  </md-content>
+
+  <md-content class="resultsContent">
+    <div class="progress" ng-hide="!percentageOff">
+      <div id="resultProgress" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="35"></div>
+    </div>
+
+    <div ng-hide="!percentageOff" class="percentageDisplayText">
+      There is a {{percentageAnimationDisplay}}% chance you won't have school tomorrow
+    </div>
+
+    <div style="text-align: center">
+      <p ng-hide="!percentageOff">{{weatherMessage}}</p>
+    </div>
+  </md-content>
+</div>
+
+<div id="hidden" style="display: none"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
+<script src="scripts/angular/module.js"></script>>
+</body>
+</html>
