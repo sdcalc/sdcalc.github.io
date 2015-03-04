@@ -34,9 +34,10 @@ angular.module("app", ["ngMaterial"])
         }
 
         $scope.percentageOff = (percentageCalc / 9.0) * 100;
+        $scope.percentageOff = Math.max(0, Math.min($scope.percentageOff, 99));
         $scope.percentageAnimationDisplay = 0;
         $scope.$apply();
-        $("#resultProgress").css({'width': Math.min($scope.percentageOff, 99) + "%"});
+        $("#resultProgress").css({'width': $scope.percentageOff + "%"});
         $interval(function(){
           $scope.percentageAnimationDisplay++;
         }, 400.0 / $scope.percentageOff, $scope.percentageOff, true);
