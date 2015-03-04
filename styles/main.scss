@@ -3,10 +3,10 @@
 
 html, body{
   font-family: 'Roboto', sans-serif !important;
-  font-size: 100% !important;
+  font-size: 100%;
 }
 
-md-content {
+#userInput, #resultsContent {
   box-shadow:0 8px 17px rgba(0,0,0,.2);
   background-color: rgba(255, 255, 255, .3) !important;
 
@@ -20,12 +20,11 @@ md-content {
 #userInput{
   width: 45%;
   height: 100vh;
+  padding: 20px;
+}
 
-  > * {
-    margin: 20px;
-    width: 95%;
-    padding: 0;
-  }
+#calculateButton {
+  margin-top: 20px;
 }
 
 .userThinksHasOffSelect {
@@ -33,6 +32,10 @@ md-content {
   font-size: 18px;
   font-weight: 500;
   color: rgb(189, 189, 189);
+
+  span {
+    line-height: 115%;
+  }
 }
 
 .resultsContent {
