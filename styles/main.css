@@ -1,0 +1,40 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url("https://ajax.googleapis.com/ajax/libs/angular_material/0.7.0/angular-material.min.css");
+html, body {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 100% !important; }
+
+md-content {
+  box-shadow: 0 8px 17px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  overflow: hidden; }
+
+.md-toolbar {
+  margin-left: 20px; }
+
+#userInput {
+  width: 45%;
+  height: 100vh; }
+  #userInput > * {
+    margin: 20px;
+    width: 95%;
+    padding: 0; }
+
+.userThinksHasOffSelect {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  color: #bdbdbd; }
+
+.resultsContent {
+  width: 45%;
+  padding: 20px; }
+
+#resultProgress {
+  background-color: #3F51B5; }
+
+.percentageDisplayText {
+  font-size: 120%;
+  text-align: center; }
+
+/*# sourceMappingURL=main.css.map */
