@@ -11,6 +11,8 @@ angular.module("app", ["ngMaterial"])
     $scope.calculations = {};
 
     $scope.updateWeather = function () {
+      $scope.percentageOff = 0;
+
       $.get("http://api.wunderground.com/api/2386afd534e1e8ee/hourly/q/" + $scope.zip + ".json", null, function (response) {
         var tonightSnow = 0.0;
 
