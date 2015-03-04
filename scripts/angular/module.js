@@ -26,7 +26,7 @@ angular.module("app", ["ngMaterial"])
         var percentageCalc = tonightSnow;
         if(tonightSnow > 0) {
           percentageCalc = percentageCalc * (1 + ($scope.snowDaysThisYear / 4));
-          percentageCalc = percentageCalc + ($scope.userThinksHasOff ? 3 : 0.01);
+          percentageCalc = percentageCalc + ($scope.userThinksHasOff ? 2 : 0.01);
         }else
         {
           $scope.weatherMessage = "Sorry, there's just not enough snowfall for school to be cancelled."
