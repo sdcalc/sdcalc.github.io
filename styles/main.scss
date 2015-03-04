@@ -10,16 +10,30 @@ html, body{
   box-shadow:0 8px 17px rgba(0,0,0,.2);
   background-color: rgba(255, 255, 255, .3) !important;
 
+  min-height: 50vh;
+
   overflow: hidden;
 }
 
+.md-fab {
+  margin: 0px 10px;
+}
+
+.githubButton {
+  background-color: darkgray !important;
+}
+
+.twitterButton {
+  background-color: #55ACEE !important;
+}
+
 .md-toolbar {
+  margin: 10px;
   margin-left: 20px;
 }
 
 #userInput{
   width: 45%;
-  height: 100vh;
   padding: 20px;
 }
 

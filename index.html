@@ -22,10 +22,14 @@
 <body ng-controller="MainController" style="background-image: url('images/notebook.png')">
 
 <md-toolbar>
-  <h2 class="md-toolbar tools">Snow Day Calculator</h2>
+  <div class="md-toolbar tools">
+    <span style="font-weight: 500; font-size: 30px">Snow Day Calculator</span>
+    <md-button onclick="window.open('https://github.com/b3zman41')" class="md-raised md-fab githubButton"><img style="width: auto; height: 100%;" src="http://teamquadx.org/img/gitHub.png"/></md-button>
+    <md-button onclick="window.open('http://twitter.com/thecoolcat911')" class="md-raised md-fab twitterButton"><img style="width: auto; height: 100%;" src="https://cdn1.iconfinder.com/data/icons/simple-icons/4096/twitter-4096-black.png"> </md-button>
+  </div>
 </md-toolbar>
 
-<div layout="row" layout-align="space-around">
+<div id="contentDiv" layout="row" layout-align="space-around">
   <md-content id="userInput">
     <md-autocomplete
       md-selected-item="selectedLocation"
@@ -74,6 +78,6 @@
 <div id="hidden" style="display: none"></div>
 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
-<script src="scripts/angular/module.js"></script>>
+<script src="scripts/angular/module.js"></script>
 </body>
 </html>
