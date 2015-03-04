@@ -35,6 +35,11 @@ angular.module("app", ["ngMaterial"])
           percentageCalc = 0.01;
         }
 
+        if(!$scope.selectedLocation)
+        {
+          $scope.weatherMessage = "You did not pick a location!";
+        }
+
         $scope.percentageOff = (percentageCalc / 9.0) * 100;
         $scope.percentageOff = Math.max(0, Math.min($scope.percentageOff, 99));
         $scope.percentageAnimationDisplay = 0;
